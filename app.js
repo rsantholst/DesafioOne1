@@ -1,6 +1,6 @@
 
 let amigos = [];
-
+let lista = document.getElementById('listaAmigos');
 function agregarAmigo() {
     let input = document.getElementById('amigo').value;
     
@@ -22,6 +22,7 @@ function sortearAmigo() {
  let amigoSorteado = amigos[aleatorio];
  let resultadoAmigo = document.getElementById('resultado');
  resultadoAmigo.innerHTML = `Amigo sorteado: ${amigoSorteado}`
+ lista.innerHTML = "";
     return;
                           
 }
@@ -35,7 +36,6 @@ function añadirArreglo(valor) {
 }
 
 function listarAmigos() {
-    let lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
 
 for (let i = 0; i < amigos.length; i++) {
